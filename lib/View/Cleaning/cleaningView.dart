@@ -74,6 +74,7 @@ class _cleaningViewState extends State<cleaningView>
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(height:4),
                       Row(
                         children: [
                           InkWell(
@@ -87,7 +88,13 @@ class _cleaningViewState extends State<cleaningView>
                             child: Text("Cleaning", style: TextStyle(fontWeight:FontWeight.bold,fontSize: 18),),
                           ),
                           Spacer(),
-                          searchAnimate(),
+                          Card(
+                            elevation:2,
+                            child: Container(
+                                child:Icon(Icons.search)
+                            ),
+                          ),
+                          // searchAnimate(),
                         ],
                       ),
                       SizedBox(height: 20,),

@@ -1,3 +1,4 @@
+import 'package:charles_app/Component/dropDownFlags.dart';
 import 'package:charles_app/View/login/forgotPassword.dart';
 import 'package:charles_app/View/login/otp.dart';
 import 'package:charles_app/View/login/signup.dart';
@@ -88,89 +89,19 @@ class _LoginnState extends State<Loginn> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Container(
-                  //   height: 40,
-                  //   width: 60,
-                  //   child: DropdownButton<String>(
-                  //     value: dropdownValue,
-                  //     icon: Icon(Icons.arrow_drop_down),
-                  //     // iconSize: 24,
-                  //     // elevation: 16,
-                  //     style: TextStyle(color: Colors.black),
-                  //     underline: Container(
-                  //       height: 2,
-                  //       color: Colors.black,
-                  //     ),
-                  //     onChanged: (String newValue) {
-                  //       setState(() {
-                  //         dropdownValue = newValue;
-                  //       });
-                  //     },
-                  //     items: <String>['+1', '+2', '+44','+33']
-                  //         .map<DropdownMenuItem<String>>((String value) {
-                  //       return DropdownMenuItem<String>(
-                  //         value: value,
-                  //         child: Text(value),
-                  //       );
-                  //     }).toList(),
-                  //   ),
-                  //   padding: EdgeInsets.only(top: 3, right: 10),
-                  // ),
                   Container(
                     height: 25,
-                    width: 80,
+                    width: 89,
                     decoration: BoxDecoration(
                       border: Border(bottom: BorderSide(width: 0.7, color: Colors.black))
                     ),
-                    child: DropdownButtonHideUnderline(
-                      child: DropdownButton<String>(
-
-                        value: dropdownValue,
-
-                        icon: Icon(Icons.arrow_downward,size: 13,),
-                        iconSize: 24,
-                        elevation: 16,
-                        style: TextStyle(color: Colors.black),
-
-                        onChanged: (String newValue) {
-                          setState(() {
-                            dropdownValue = newValue;
-                          });
-                        },
-                        items: <String>['+92', '+00', '+12', '+55']
-                            .map<DropdownMenuItem<String>>((String value) {
-                          return DropdownMenuItem<String>(
-
-                            value: value,
-                            child: Row(
-                              children: [
-                                Image.asset('lib/assets/images/flag.jpg',width: 30,),
-                                SizedBox(width: 5,),
-                                Text(value),
-                              ],
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    ),
-                    // CountryCodePicker(
-                    //   onChanged: print,
-                    //   // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-                    //   initialSelection: 'IT',
-                    //   favorite: ['+39','FR'],
-                    //   // optional. Shows only country name and flag
-                    //   showCountryOnly: false,
-                    //   // optional. Shows only country name and flag when popup is closed.
-                    //   showOnlyCountryWhenClosed: false,
-                    //   // optional. aligns the flag and the Text left
-                    //   alignLeft: false,
-                    // ),
+                    child: drop(),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left:8.0),
                     child: Container(
                       height: 25,
-                      width: 210,
+                      width: 200,
                       child: TextField(
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.phone_in_talk, size: 20, color: Colors.black,),

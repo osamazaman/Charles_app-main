@@ -43,6 +43,7 @@ class _cleaningLandingState extends State<cleaningLanding> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(height: 4,),
                       Row(
                         children: [
                           InkWell(
