@@ -1,4 +1,5 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:charles_app/View/splash.dart';
 import 'package:flutter/material.dart';
 import 'View/IntroPages/introPages.dart';
 
@@ -17,18 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedSplashScreen(
-        animationDuration: Duration(seconds: 1),
-
-        backgroundColor: Colors.white,
-        splash: Image.asset('lib/assets/images/Home.png'),
-
-        nextScreen: IntroPage(),
-        splashTransition:  SplashTransition.fadeTransition ,
-
-
-
-      ),
+      home: splash()
     );
   }
 }

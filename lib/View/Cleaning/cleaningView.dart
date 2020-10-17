@@ -88,10 +88,13 @@ class _cleaningViewState extends State<cleaningView>
                             child: Text("Cleaning", style: TextStyle(fontWeight:FontWeight.bold,fontSize: 18),),
                           ),
                           Spacer(),
-                          Card(
-                            elevation:2,
-                            child: Container(
-                                child:Icon(Icons.search)
+                          Padding(
+                            padding: const EdgeInsets.only(right:20.0),
+                            child: Card(
+                              elevation:2,
+                              child: Container(
+                                  child:Icon(Icons.search)
+                              ),
                             ),
                           ),
                           // searchAnimate(),
@@ -116,9 +119,9 @@ class _cleaningViewState extends State<cleaningView>
                           SingleChildScrollView(scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                InkWell(
+                              InkWell(
                                   child: Container(
-                                    height: 135,
+                                    height: 145,
                                     width: 150,
                                     child: Card(
                                       color:cardcolor1,
@@ -185,7 +188,7 @@ class _cleaningViewState extends State<cleaningView>
                             ),
                               InkWell(
                                 child: Container(
-                                  height: 135,
+                                  height: 145,
                                   width: 150,
                                   child: Card(
                                     color:cardcolor2,
@@ -251,7 +254,7 @@ class _cleaningViewState extends State<cleaningView>
                               ),
                               InkWell(
                                 child: Container(
-                                  height: 135,
+                                  height: 145,
                                   width: 150,
                                   child: Card(
                                     color:cardcolor3,
@@ -316,7 +319,7 @@ class _cleaningViewState extends State<cleaningView>
                               ),
                               InkWell(
                                 child: Container(
-                                  height: 135,
+                                  height: 145,
                                   width: 150,
                                   child: Card(
                                     color:cardcolor4,
@@ -397,8 +400,6 @@ class _cleaningViewState extends State<cleaningView>
                             child:  Visibility(visible: poolvisibility,child:Container(child: poolLanding(),height: MediaQuery.of(context).size.height/2.5)),
                           ),
 
-
-                      SizedBox(height: 3,),
 
 
                       SizedBox(height: 25,),
