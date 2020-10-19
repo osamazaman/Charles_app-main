@@ -14,7 +14,7 @@ bool selected= true;
 bool selected2= true;
 bool selected3= true;
 bool selected4= true;
-Color cardcolor1=Colors.red;
+Color cardcolor1=appColors.redColor;
 Color cardcolor2=Color(0XFFBCBDC1);
 Color cardcolor3=Color(0XFFBCBDC1);
 Color cardcolor4=Color(0XFFBCBDC1);
@@ -52,9 +52,10 @@ class _cleaningViewState extends State<cleaningView>
 
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
-            height: MediaQuery.of(context).size.height,
+            // height: MediaQuery.of(context).size.height,
             color: Colors.white,
             child: Stack(
               children:[
@@ -402,7 +403,7 @@ class _cleaningViewState extends State<cleaningView>
 
 
 
-                      SizedBox(height: 25,),
+                      SizedBox(height: 100,),
 
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -411,7 +412,10 @@ class _cleaningViewState extends State<cleaningView>
                             Container(
                               width:150,
                               child: FlatButton(
-                                color: Color(0xFFEFEFEF),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                color: Color(0xFFBCBDC1),
                                 textColor: Colors.grey,
                                 disabledColor: Colors.grey,
                                 disabledTextColor: Colors.black,
@@ -422,16 +426,19 @@ class _cleaningViewState extends State<cleaningView>
                                 },
                                 child: Text(
                                   "CUSTOMIZE",
-                                  style: TextStyle(fontSize: 13.0),
+                                  style: TextStyle(fontSize: 10.0, color:Colors.white, fontFamily: "opsb"),
                                 ),
                               ),
                             ),
                             Container(
                               width:150,
                               decoration:BoxDecoration(
-                                borderRadius:BorderRadius.circular(10)
+                                borderRadius:BorderRadius.circular(5)
                               ),
                               child: FlatButton(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                ),
                                 color: Colors.red,
                                 textColor: Colors.white,
                                 disabledColor: Colors.grey,
@@ -444,7 +451,7 @@ class _cleaningViewState extends State<cleaningView>
                                 },
                                 child: Text(
                                   "BOOK NOW",
-                                  style: TextStyle(fontSize: 13.0),
+                                  style: TextStyle(fontSize: 10.0, fontFamily:"opsb"),
                                 ),
                               ),
                             )

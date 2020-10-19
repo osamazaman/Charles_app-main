@@ -39,29 +39,32 @@ class _dropState extends State<drop> {
         body:Container(
             child:
             Center(
-              child:  DropdownButton<Item>(
-                // hint: Text('List'),
-                value: selectedUser == null?users[0]:selectedUser,
-                onChanged: (Item Value) {
-                  setState(() {
-                    selectedUser = Value;
-                  });
-                },
-                items: users.map((Item user) {
-                  return  DropdownMenuItem<Item>(
-                    value: user,
-                    child: Row(
-                      children: <Widget>[
-                        user.imagee,
-                        SizedBox(width: 10,),
-                        Text(
-                          user.number,
-                          style:  TextStyle(color: Colors.black),
-                        ),
-                      ],
-                    ),
-                  );
-                }).toList(),
+              child:  DropdownButtonHideUnderline(
+                child: DropdownButton<Item>(
+
+                  // hint: Text('List'),
+                  value: selectedUser == null?users[0]:selectedUser,
+                  onChanged: (Item Value) {
+                    setState(() {
+                      selectedUser = Value;
+                    });
+                  },
+                  items: users.map((Item user) {
+                    return  DropdownMenuItem<Item>(
+                      value: user,
+                      child: Row(
+                        children: <Widget>[
+                          user.imagee,
+                          SizedBox(width: 10,),
+                          Text(
+                            user.number,
+                            style:  TextStyle(color: Colors.black),
+                          ),
+                        ],
+                      ),
+                    );
+                  }).toList(),
+                ),
               ),
 
             ))

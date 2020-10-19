@@ -227,7 +227,7 @@ class drawersr {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left:12.0),
+                      padding: const EdgeInsets.only(left:15.0),
                       child: Container(
                           height:25,child: Image.asset("lib/assets/images/socials.png")),
                     ),

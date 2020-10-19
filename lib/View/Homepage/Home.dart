@@ -25,7 +25,7 @@ class Mainpage extends StatelessWidget {
                 Container(
                   height: size.height / 5,
                   width: size.width / 2.5,
-                  margin: EdgeInsets.only(top:25,left: 220),
+                  margin: EdgeInsets.only(top:24,left: 220),
                   child: Opacity(
                     opacity: 1.0,
                     child: Image.asset(
@@ -38,6 +38,7 @@ class Mainpage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    SizedBox(height: 5,),
                     Row(
                       children: [
                         Padding(
@@ -149,7 +150,7 @@ class Mainpage extends StatelessWidget {
                           fillColor: Colors.white70,
                           border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.search,size: 20,
-                              color: Color.fromRGBO(69, 69, 69, 1)
+                              color: Color(0xFF000000)
                           ),
                           hintText: 'Looking for something',
                           hintStyle: TextStyle(color: Color(0xFFAAAAAA), fontSize: 10),
@@ -157,6 +158,7 @@ class Mainpage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: 10),
                     Container(
                       padding: EdgeInsets.only(top: 15),
                       alignment: Alignment.topLeft,
@@ -182,8 +184,8 @@ class Mainpage extends StatelessWidget {
                         ],
                       ),
                     ),
+                    SizedBox(height: 8,),
                     Container(
-                      padding: EdgeInsets.only(top: 15),
                       alignment: Alignment.topLeft,
                       height: size.height / 3.3,
                       width: size.width,
@@ -222,8 +224,8 @@ class Mainpage extends StatelessWidget {
                         ],
                       ),
                     ),
+                    SizedBox(height: 5,),
                     Container(
-                      padding: EdgeInsets.only(top: 15),
                       alignment: Alignment.topLeft,
                       height: size.height / 3,
                       width: size.width,
