@@ -1,4 +1,5 @@
 import 'package:charles_app/View/login/Loginnn.dart';
+import 'package:charles_app/assets/appColors/appColors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -310,12 +311,14 @@ class _IntroPageState extends State<IntroPage> {
                             MediaQuery.of(context).size.width / 1.2,
                             height: 50,
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: <Color>[
-                                Color.fromRGBO(248, 7, 89, 1),
-                                Color.fromRGBO(243, 76, 67, 1)
+                              // gradient: LinearGradient(colors: <Color>[
+                              //   Color.fromRGBO(248, 7, 89, 1),
+                              //   Color.fromRGBO(243, 76, 67, 1)
 
-                              ], begin: Alignment.bottomLeft),
+
+                              // ], begin: Alignment.bottomLeft),
 //                              color: Color.fromRGBO(119, 0, 0, 1),
+                              color:appColors.redColor,
 
                               borderRadius: BorderRadius.circular(60.0),
                             ),

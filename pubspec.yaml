@@ -97,6 +97,9 @@ flutter:
     - family: opsb
       fonts:
         - asset: fonts/OpenSans-Bold.ttf
+    - family: sspsb
+      fonts:
+        - asset: fonts/SourceSansPro-SemiBold.ttf
 
 
 

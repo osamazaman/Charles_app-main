@@ -75,19 +75,23 @@ class ServiceCards extends State<ServiceCard> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top:75),
-                      child: Text(
-                        services.text,
-                        style: TextStyle(
-                            fontFamily:'monm',
-                            color: Colors.white, fontSize: 17),
+                      child: Center(
+                        child: Text(
+                          services.text,
+                          style: TextStyle(
+                              fontFamily:'monm',
+                              color: Colors.white, fontSize: 17),
+                        ),
                       ),
                     ),
-                    Text(
-                      services.text2,
-                      style: TextStyle(
-                          fontFamily:'monr',
-                          color: Colors.white,
-                      fontSize: 12),
+                    Center(
+                      child: Text(
+                        services.text2,
+                        style: TextStyle(
+                            fontFamily:'monr',
+                            color: Colors.white,
+                        fontSize: 12),
+                      ),
                     )
                   ],
                 ),

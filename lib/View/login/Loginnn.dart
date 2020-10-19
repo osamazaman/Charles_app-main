@@ -2,6 +2,7 @@ import 'package:charles_app/Component/dropDownFlags.dart';
 import 'package:charles_app/View/login/forgotPassword.dart';
 import 'package:charles_app/View/login/otp.dart';
 import 'package:charles_app/View/login/signup.dart';
+import 'package:charles_app/assets/appColors/appColors.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -175,12 +176,13 @@ class _LoginnState extends State<Loginn> {
                   MediaQuery.of(context).size.width / 1.3,
                   height: 50,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: <Color>[
-                      Color.fromRGBO(248, 7, 89, 1),
-                      Color.fromRGBO(243, 76, 67, 1)
-                    ], begin: Alignment.bottomLeft),
+                    // gradient: LinearGradient(colors: <Color>[
+                    //   Color.fromRGBO(248, 7, 89, 1),
+                    //   Color.fromRGBO(243, 76, 67, 1)
+                    // ], begin: Alignment.bottomLeft),
 //                              color: Color.fromRGBO(119, 0, 0, 1),
 
+                    color:appColors.redColor,
                     borderRadius: BorderRadius.circular(60.0),
                   ),
                   child: Center(
@@ -203,7 +205,7 @@ class _LoginnState extends State<Loginn> {
 //                            _settingModalBottomSheet(context);
                 },
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center ,
                 children: <Widget>[
@@ -214,18 +216,18 @@ class _LoginnState extends State<Loginn> {
                         fontFamily: "soui",
                         fontStyle: FontStyle.italic,
                         color: Colors.black,
-                        fontSize: 14),textAlign: TextAlign.right,
+                        fontSize: 15),textAlign: TextAlign.right,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
                     child: InkWell(
                       child: Text(
-                        "Sign up",style: TextStyle(
+                        " Sign up",style: TextStyle(
                         fontFamily: "soui",
                         fontStyle: FontStyle.italic,
                         color: Colors.grey[800],
-                        fontSize: 14,
+                        fontSize: 15,
                         decoration: TextDecoration.underline,
                       ),textAlign: TextAlign.right,
                       ),
@@ -244,7 +246,7 @@ class _LoginnState extends State<Loginn> {
               ),
               SizedBox(height: 10,),
               Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: 150,
                   height: 35,
                   child: Image.asset("lib/assets/images/logos.png")
               ),
@@ -257,9 +259,9 @@ class _LoginnState extends State<Loginn> {
                   color: Colors.white,
                   boxShadow: [BoxShadow(
                     color: Colors.red.withOpacity(0.2),
-                    blurRadius: 2,
+                    blurRadius: 10,
                     spreadRadius: 1,
-                    // offset: Offset(0,2),
+                    offset: Offset(0,5),
                   )],
                 ),
                 child: FlatButton(
@@ -274,7 +276,7 @@ class _LoginnState extends State<Loginn> {
                   },
                   child: Text(
                     "Skip",
-                    style: TextStyle(fontSize: 13.0, color: Colors.red, fontFamily: "monr"),
+                    style: TextStyle(fontSize: 15.0, color:appColors.redColor, fontFamily: "sspsb"),
                   ),
                 ),
               ),

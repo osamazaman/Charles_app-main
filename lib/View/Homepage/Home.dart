@@ -25,9 +25,9 @@ class Mainpage extends StatelessWidget {
                 Container(
                   height: size.height / 5,
                   width: size.width / 2.5,
-                  margin: EdgeInsets.only(top:20,left: 220),
+                  margin: EdgeInsets.only(top:25,left: 220),
                   child: Opacity(
-                    opacity: 0.6,
+                    opacity: 1.0,
                     child: Image.asset(
                       'lib/assets/images/logo.png',
                     ),
@@ -38,107 +38,106 @@ class Mainpage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                        padding: EdgeInsets.only(top: 20),
-                        height: size.height/9,
-                        width: size.width,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top:12,bottom: 30),
-                              child: Builder(
-                                builder: (BuildContext context){
-                                  return
-                                    InkWell(
-                                      onTap: ()=>{
-                                        Scaffold.of(context).openDrawer(),
-                                      },
-                                      child: Container(
-                                        // padding: EdgeInsets.only(bottom: 5),
-                                        width: 40,
-                                        height: 30,
-                                        color: Colors.transparent,
-                                        child:Image.asset('lib/assets/images/menu.png')
-                                        // IconButton(
-                                        //
-                                        //   icon: Icon(Icons.menu, size: 22, color: Colors.black,),
-                                        //   color: Colors.black,
-                                        //   onPressed: ()=>{
-                                        //     Scaffold.of(context).openDrawer(),
-                                        //   },
-                                        //   tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-                                        // ),
-                                      ),
-                                    );
-                                },
-                              ),
-                            ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top:12,bottom: 30),
+                          child: Builder(
+                            builder: (BuildContext context){
+                              return
+                                InkWell(
+                                  onTap: ()=>{
+                                    Scaffold.of(context).openDrawer(),
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top:18.0),
+                                    child: Container(
+                                      // padding: EdgeInsets.only(bottom: 5),
+                                      width: 40,
+                                      // height: 100,
+                                      color: Colors.transparent,
+                                      child:Image.asset('lib/assets/images/menu.png', height: 15,)
+                                      // IconButton(
+                                      //
+                                      //   icon: Icon(Icons.menu, size: 22, color: Colors.black,),
+                                      //   color: Colors.black,
+                                      //   onPressed: ()=>{
+                                      //     Scaffold.of(context).openDrawer(),
+                                      //   },
+                                      //   tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+                                      // ),
+                                    ),
+                                  ),
+                                );
+                            },
+                          ),
+                        ),
 
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 5),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                      alignment: Alignment.bottomRight,
-                                      // padding: EdgeInsets.only(top: 15),
-                                      child: Text(
-                                        'Hi, Charles',
-                                        style: TextStyle(
-                                            fontSize: 24,
-                                            fontFamily: 'monb',
-                                            color: Color.fromRGBO(69, 69, 69, 1)
-                                        ),
-                                      )),
-                                  Container(
-                                      child: Row(
-                                        children: [
-                                          InkWell(
-                                            onTap: (){
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (_) => setLocation(),
-                                                  ));
-                                            },
-                                            child: Container(
-                                              height: 12,
-                                                child: Icon(Icons.my_location, size: 13,)),
-                                          ),
-                                          Container(
-                                            width: MediaQuery.of(context).size.width/2,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(left:8.0),
-                                              child: Text(
-                                                'LYTTON PARK, Toronto Canada',
-                                                style: TextStyle(
-                                                  fontSize: 10,
-                                                  fontFamily: 'opsr'
-                                                ),
-                                              ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                  alignment: Alignment.bottomRight,
+                                  // padding: EdgeInsets.only(top: 15),
+                                  child: Text(
+                                    'Hi, Charles',
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontFamily: 'monb',
+                                        color: Color.fromRGBO(69, 69, 69, 1)
+                                    ),
+                                  )),
+                              Container(
+                                  child: Row(
+                                    children: [
+                                      InkWell(
+                                        onTap: (){
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (_) => setLocation(),
+                                              ));
+                                        },
+                                        child: Container(
+                                          height: 12,
+                                            child: Icon(Icons.my_location, size: 13,)),
+                                      ),
+                                      Container(
+                                        width: MediaQuery.of(context).size.width/2,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left:8.0),
+                                          child: Text(
+                                            'LYTTON PARK, Toronto Canada',
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontFamily: 'opsr'
                                             ),
                                           ),
-                                        ],
-                                      )),
-                                ],
-                              ),
-                            ),
-                            Spacer(),
-                            CircleAvatar(
-                              radius: 50,
-                              child: Image.asset("lib/assets/images/dp.png"),
-                              backgroundColor: Colors.transparent,
-                            ),
-                            Spacer(),
-                          ],
-                        )),
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                            ],
+                          ),
+                        ),
+                        Spacer(),
+                        CircleAvatar(
+                          radius: 30,
+                          child: Image.asset("lib/assets/images/dp.png"),
+                          backgroundColor: Colors.transparent,
+                        ),
+                        Spacer(),
+                      ],
+                    ),
                     Container(
                       width: size.width / 1.1,
-                      height: 40,
+                      height: 38,
                       padding: EdgeInsets.only( top: 5,left: 10),
                       child: TextField(
                         // cursorHeight: 20,
@@ -153,7 +152,7 @@ class Mainpage extends StatelessWidget {
                               color: Color.fromRGBO(69, 69, 69, 1)
                           ),
                           hintText: 'Looking for something',
-                          hintStyle: TextStyle(color: Color.fromRGBO(170, 170, 170, 1)),
+                          hintStyle: TextStyle(color: Color(0xFFAAAAAA), fontSize: 10),
 
                         ),
                       ),

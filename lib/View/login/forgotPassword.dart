@@ -1,3 +1,4 @@
+import 'package:charles_app/assets/appColors/appColors.dart';
 import 'package:flutter/material.dart';
 
 class forgotPw extends StatefulWidget {
@@ -71,7 +72,7 @@ class _forgotPwState extends State<forgotPw> {
                       spreadRadius: 1,
                       offset: Offset(0,2),
                     )],
-                    color: Colors.red,
+                    color:appColors.redColor,
                   ),
                   child: FlatButton(
                     textColor: Colors.white,
